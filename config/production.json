@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://deshmaneakash100:Akash16082003@cluster1.giotjq0.mongodb.net/Resume?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://deshmaneakash100:<password>@cluster1.giotjq0.mongodb.net/Resume?retryWrites=true&w=majority",
     "jwtSecret": "secret"
   }
