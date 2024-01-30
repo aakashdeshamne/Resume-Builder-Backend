@@ -65,13 +65,6 @@ const socialLinksSchema = mongoose.Schema({
  
 });
 
-const summarySchema = mongoose.Schema({
-  professionalSummary: {
-    type: String,
-   
-  },
- 
-});
 
 const skillsSchema = mongoose.Schema({
   skills: {
@@ -121,6 +114,7 @@ const workHistorySchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  //[[rpject on which you work]]
   employer: {
     type: String,
     required: true,
@@ -172,21 +166,6 @@ const certificationSchema = mongoose.Schema({
  
 });
 
-const accomplishmentSchema = mongoose.Schema({
-  accomplishmentName: {
-    type: String,
-    required: true,
-  },
-  issuer: {
-    type: String,
-    required: true,
-  },
-  issueDate: {
-    type: Date,
-    required: true,
-  },
-  
-});
 
 const projectSchema = mongoose.Schema({
   projectName: {
@@ -206,23 +185,19 @@ const projectSchema = mongoose.Schema({
 
 const ResumeHeading = mongoose.model('ResumeHeading', headingSchema);
 const SocialLinks = mongoose.model('SocialLinks', socialLinksSchema);
-const Summary = mongoose.model('Summary', summarySchema);
 const Skills = mongoose.model('Skills', skillsSchema);
 const Education = mongoose.model('Education', educationSchema);
 const WorkHistory = mongoose.model('WorkHistory', workHistorySchema);
 const Certification = mongoose.model('Certification', certificationSchema);
-const Accomplishment = mongoose.model('Accomplishment', accomplishmentSchema);
 const Project = mongoose.model('Project', projectSchema);
 
 const resumeSchema = mongoose.Schema({
   heading: headingSchema,
   socialLinks: socialLinksSchema,
-  summary: summarySchema,
   skills: skillsSchema,
   education: [educationSchema], 
   workHistory: [workHistorySchema],
   certifications: [certificationSchema], 
-  accomplishments: [accomplishmentSchema],
   projects: [projectSchema],
 });
 
